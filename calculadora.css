@@ -1,0 +1,24 @@
+#formularioCalculadora{
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+#formularioCalculadora input{
+    width: 100%;
+    height: 60px;
+    color: black;
+    background-color: white;
+    
+    font-size: 20px;
+}
+
+#cero {
+    
+    height: 60%;
+}
+
+#igual {
+    height: 60%;
+   width: 200%;
+}

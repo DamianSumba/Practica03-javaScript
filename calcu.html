@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calcu</title>
+    <link rel="stylesheet" href="calculadora.css" type="text/css" media="screen">
+    <script type="text/javascript">
+        enviar();
+        sumar();
+        limp();
+        calcular();
+        restar();
+        var total = 0;
+        var opc = '';
+        function enviar(numero){
+            var txtResultado = document.getElementById("txtResultado");
+            if (txtResultado != null) {
+            txtResultado.value += numero;                
+            }
+        }
+        
+        function sumar(){ 
+            var txtResultado = document.getElementById("txtResultado");
+            if (txtResultado != null) {
+            total = parseFloat(txtResultado.value);
+            txtResultado.value = '';
+            }
+            opc = '+'
+        }
+        
+        function restar(){ 
+            var txtResultado = document.getElementById("txtResultado");
+            if (txtResultado != null) {
+            total = parseFloat(txtResultado.value);
+            txtResultado.value = '';
+            }
+            opc = '-'
+        }
+        
+        function multiplicar(){ 
+            var txtResultado = document.getElementById("txtResultado");
+            if (txtResultado != null) {
+            total = parseFloat(txtResultado.value);
+            txtResultado.value = '';
+            }
+            opc = '*'
+        }
+        
+        function dividir(){ 
+            var txtResultado = document.getElementById("txtResultado");
+            if (txtResultado != null) {
+            total = parseFloat(txtResultado.value);
+            txtResultado.value = '';
+            }
+            opc = '/'
+        }
+        
+        function limp(){
+            var txtResultado = document.getElementById("txtResultado");
+            txtResultado.value = '';
+        }
+        
+       function calcular(){
+            var txtResultado = document.getElementById("txtResultado");
+            if (txtResultado != null) {
+                switch(opc){
+                    case '+':
+                        total += parseFloat(txtResultado.value);
+                        txtResultado.value = total;
+                        break;
+                    case '-':
+                        total -= parseFloat(txtResultado.value);
+                        txtResultado.value = total;
+                        break;
+                    case '*':
+                        total = total * parseFloat(txtResultado.value);
+                        txtResultado.value = total;
+                        break;
+                    case '/':
+                        total = total / parseFloat(txtResultado.value);
+                        txtResultado.value = total;
+                        break;
+                }
+                        total = 0;
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <div>
+    
+    </div>
+    <div>
+            <form id="formularioCalculadora">
+                    <textarea rows="2" cols="35" id="txtResultado"></textarea><br>
+                <table>
+                    <tbody>
+                        <tr id="fila1">
+                            <td><input type="button" value="MC" id="mc" onclick="mc()"></td>
+                            <td><input type="button" value="MR" id="mr" onclick="mr()"></td>
+                            <td><input type="button" value="MS" id="ms" onclick="ms()"></td>
+                            <td><input type="button" value="M+" id="m+" onclick="mmas"></td>
+                            <td><input type="button" value="M-" id="m-" onclick="mmenos"></td>
+                        </tr>
+                        <tr id="fila2">
+                            <td><input type="button" value="<-" id="back" onclick="back()"></td>
+                            <td><input type="button" value="C" id="limpiar" onclick="limp()"></td>
+                            <td><input type="button" value="CE" id="limpiarall" onclick="limpiar()"></td>
+                            <td><input type="button" value="+-" id="masmenos" onclick="masmenos()"></td>
+                            <td><input type="button" value="v-" id="valor" onclick="valor()"></td>
+                        </tr>
+                        <tr id="fila3">
+                            <td><input type="button" value="7" id="siete" onclick="enviar(7)">
+                            <td><input type="button" value="8" id="ocho" onclick="enviar(8)"></td>
+                            <td><input type="button" value="9" id="nueve" onclick="enviar(9)"></td></td>
+                            <td><input type="button" value="/" id="dividido" onclick="dividir()"></td>
+                            <td><input type="button" value="%" id="porcentaje" onclick="porcentaje()"></td>
+                        </tr>
+                        <tr id="fila4">
+                            <td><input type="button" value="4" id="cuatro" onclick="enviar(4)"></td>
+                            <td><input type="button" value="5" id="cinco" onclick="enviar(5)"></td>
+                            <td><input type="button" value="6" id="seis" onclick="enviar(6)"></td>
+                            <td><input type="button" value="*" id="por" onclick="multiplicar()"></td>
+                            <td><input type="button" value="1/x" id="1/x" onclick="unoex()"></td>
+                        </tr>
+                        <tr id="fila5">
+                            <td><input type="button" value="1" id="uno" onclick="enviar(1)"></td>
+                            <td><input type="button" value="2" id="dos" onclick="enviar(2)"></td>
+                            <td><input type="button" value="3" id="tres" onclick="enviar(3)"></td>
+                            <td><input type="button" value="-" id="menos" onclick="restar()"></td>
+                            <td id="igual" ><input type="button" value="=" id="igual" onclick="calcular()"></td>
+                        </tr>
+                        <tr id="fila6">
+                            <td id="cero"  colspan="2"><input type="button" value="0" id="cero" onclick="enviar(0)"></td>
+                            <td><input type="button" value="." id="punto" onclick="enviar('.')"></td>
+                            <td><input type="button" value="+" id="mas" onclick="sumar()"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                   
+  
+                </form>
+    </div>
+</body>
+</html>
