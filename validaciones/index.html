@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8">
+        <title>Formulario</title>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="funciones.js"></script>
+    </header>
+    
+    <body>
+
+        <form id="form1" atributes action="pagina.php">                                         <!-- Etiqueta formulario-->
+            <div><h3 align="center">Datos Personales</h3></div>
+                    
+            <div>
+                <label for="cedula">Cedula:</label>
+                <input class="error" type="text" id="cedula" title="Ingrese los 10 números de su C.I" minlength="10" maxlength="10" onkeypress="return soloNumeros(event);" required placeholder="Ingrese su C.I" onblur="return validarCedula(cedula);" required/>             
+            </div>                                                                    <!-- Comapo input y label cedula -->
+            <div id="eCedula" align="center" style="color: red; font-size: 11px;"></div>
+            
+            <div>
+                <label for="nombres">Nombres:</label>
+                <input class="error" type="text" id="nombres" title="Ingrese sus dos nombres" required placeholder="Nombre Nombre" onkeypress="return soloLetras(event);" onblur="return validarNombres(nombres);" required/>      
+            </div>                                                                    <!-- Comapo input y label nombres -->
+            <div id="eNombres" align="center" style="color: red; font-size: 11px;"></div>
+            
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input class="error" type="text" id="apellidos" title="Ingrese sus dos apellidos" required placeholder="Apellido Apellido" onkeypress="return soloLetras(event);" onblur="return validarApellidos(apellidos);" required/>      
+            </div>
+            <div id="eApellidos" align="center" style="color: red; font-size: 11px;"></div>      <!-- Comapo input y label apellidos -->
+            
+            <div>
+                <label for="telefono">Telefono:</label>
+                <input class="error" type="text" id="telefono" required placeholder="Celular: 0935485612"  onkeypress="return soloNumeros(event);"  onblur="return validarCelular(telefono);" minlength="10" maxlength="10" required/>        
+            </div>                                                                    <!-- Comapo input y label telefono -->
+            <div id="eTelefono" align="center" style="color: red; font-size: 11px;"></div>
+
+            <div>
+                <label for="genero">Genero:</label>
+                <select>
+                    <option value="Femnino">Femenino</option>
+                    <option value="Masculino">Masculino</option>    
+                </select>            
+            </div>                                                                    <!-- Comapo y label genero -->
+
+            <div>
+                <label for="correo">Correo:</label>
+                <input class="error" type="text" id="correo" required placeholder="Ingrese su correo"; onblur="return validarCorreoL(this); required"/>   
+            </div>                                                                    <!-- Comapo input y label correo -->
+            <div id="eCorreo" align="center" style="color: red; font-size: 11px;"></div>
+
+            <div>
+                 <input type="submit" name="Validar" id="validar" value="Validar" onclick="return todo();">     <!-- Boton validar -->
+            </div>
+        </form>
+        
+    </body>
+</html>
+        

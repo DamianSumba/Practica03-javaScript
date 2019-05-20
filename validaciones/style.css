@@ -1,0 +1,53 @@
+form{
+    padding: 1%;
+    margin: 0 auto;
+    width: 400px;
+    background-image: url("h.png");
+    background-repeat: no-repeat;
+    content: inherit;
+}
+
+form div + div {
+    margin-top: 1em;
+    margin-left: 5%;
+}
+
+label{
+    display: inline-block;
+    width: 60px;
+    margin-right: 2em;
+    margin-left: 3em;
+}
+
+select{
+    width: 172px;
+}
+button{
+    display: block;
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+body{
+    background-color: #e8efee;
+}
+
+/*ESTILO TABLA*/
+table{
+    margin: auto;
+    border: 0.05em collapse #dbdcdb;
+    font-family: sans-serif;
+}
+
+table th {
+    background-color: #C3C3C3;
+}
+
+table tr:nth-child(odd) {
+    background-color: #d7eeea;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
