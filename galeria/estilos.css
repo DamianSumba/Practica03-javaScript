@@ -1,0 +1,71 @@
+for{
+    margin: 1%;
+    padding: 1%;
+    border: 3px;
+    border-style: double;
+    border-color: black;
+    border-radius: 2em; 
+}
+form{
+    background-color: beige;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(138, 38, 38);
+    background-color: rgb(177, 174, 38);
+    
+    
+}
+
+div{
+    font-family: cursive;
+    color: dimgrey;
+    margin: 2%;
+    
+}
+
+label {
+    margin: 2%;
+    display:table-row-group;
+}
+
+input{
+     font: 0.9em cursive;
+    width: 50%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1%;
+}
+
+ .button{
+    font: 100% Cursive; 
+    width: 100px;  
+    margin-left: 2%;
+    
+}
+ .button2{
+    font: 100% Cursive; 
+    width: 100px;  
+    margin-left: 4%;
+     background-color: burlywood;
+    
+}
+img{
+    background-color: black;
+}
+
+.b3{
+    font-family: cursive;
+    background-color: rgb(115, 112, 133);
+    width: 100px;  
+    border-color: rgb(24, 81, 185);
+
+  
+}
+
+select{
+    padding: 0.5%;
+}
+
+

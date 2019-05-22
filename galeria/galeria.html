@@ -1,21 +1,24 @@
-<!DOCTYPE html> 
-<html> 
-    <header>
-        <meta charsettf-8">
-        <title>Cargar Imagenes</title>    
-        <script src="funcionesI.js"></script>
-        <link href="cs_form.css" rel="stylesheet"/>
+<!DOCTYPE html>
+<html>
+    <head>
 
-    </header>        
+        <title>Galeria</title>
+        <meta charset="utf-8">
+        <link href="estilos.css" rel="stylesheet">
+        <script src="funciones.js"></script>
+    </head>
     
-    <body style="display: block">
-        <h2 align="center">Galeria de Imágenes</h2>         <!-- Titulo de la página-->
-        <br><br>
-        <div id="foto" style="margin-left: 50%"></div>      <!-- Etiqueta donde se mostraran las imágenes-->
-        <div style="margin-left: 42%">                      <!-- Zona donde se mostraran los botones que llamaran a cada metodo que les correspondan-->
-                <input type="submit" id="botonA" disabled='true' value="Atras" onclick="atras();" >
-                <button type="button" style="display: inline" onclick="iniciar();">Iniciar</button>  
-                <input type="submit" id="botonS" disabled='false' value="Siguiente" onclick="siguiente();" >
+    <body>
+        <div width=100% align=center>
+        <h1 align=center>Galeria</h1>
+        <img id="foto" width="500px" height="500px">
         </div>
-    </body>
+    <div width=100% align=center>
+    <input class="b3" type="button" id="ant" value="Atras" onclick="anterior();">
+    <input class="b3" type="button" id="iniciar" value="Iniciar" onclick="ini();">
+    <input class="b3" type="button" id="sig" value="Siguiente" onclick="siguiente();">
+    
+    </div>
+
+</body>
 </html>
